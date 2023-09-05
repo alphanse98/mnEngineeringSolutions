@@ -57,7 +57,7 @@ import {
 const Chart = ({ChartData, dataKeyName, dataKeyLine}) => {
   return (
     <div className="App">
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="95%" height={300}>
           <AreaChart
             width={500}
             height={200}
