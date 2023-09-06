@@ -35,7 +35,7 @@ export const HomePage = () => {
     { name: "D2", value: 50 }
   ];
 
-  // mock from api pass to  Chart
+  // mock from api pass to  Chart.
   const getData =async ()=>{
     try {
       const res = await axios.get("https://fakestoreapi.com/products")
