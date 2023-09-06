@@ -5,6 +5,8 @@ import SideMenuBar from '../components/SideMenuBar';
 import axios from 'axios';
 
 const UserPage = () => {
+
+   // mock data for piechart
   const [data, setData] = useState([])
   const PieChart2 = [
     { name: "A1", value: 100 },
@@ -32,6 +34,8 @@ const UserPage = () => {
     { name: "D1", value: 150 },
     { name: "D2", value: 50 }
   ];
+
+    // mock from api pass to  Chart
   const getData =async ()=>{
     try {
       const res = await axios.get("https://jsonplaceholder.typicode.com/todos")
@@ -44,6 +48,9 @@ const UserPage = () => {
   useEffect(()=>{
     getData()
   },[])
+
+  // dataKeyName grap x axis number or text
+  // dataKeyLine grap line valu
   return (
     <div className='page'>
       <SideMenuBar/>

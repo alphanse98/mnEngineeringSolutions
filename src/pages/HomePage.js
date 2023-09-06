@@ -5,6 +5,8 @@ import SideMenuBar from '../components/SideMenuBar';
 import axios from 'axios';
 
 export const HomePage = () => {
+
+  // mock data for piechart
   const [data, setData] = useState([])
   const PieChart1 = [
     { name: "A1", value: 100 },
@@ -33,6 +35,7 @@ export const HomePage = () => {
     { name: "D2", value: 50 }
   ];
 
+  // mock from api pass to  Chart
   const getData =async ()=>{
     try {
       const res = await axios.get("https://fakestoreapi.com/products")
@@ -46,6 +49,8 @@ export const HomePage = () => {
     getData()
   },[])
 
+  // dataKeyName grap x axis number or text
+  // dataKeyLine grap line value
   return (
     <div className='page'>
       <SideMenuBar/>
