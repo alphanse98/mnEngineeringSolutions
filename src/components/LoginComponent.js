@@ -20,7 +20,7 @@ const LoginComponent = ({ setAuthenticate }) => {
 
   return (
     <div className='loginCom'>
-      <form onClick={handleUseLogin} className='loginContainer'>
+      <form onSubmit={handleUseLogin} className='loginContainer'>
         <p>Login</p>
         <input
           onChange={handleUseData}
